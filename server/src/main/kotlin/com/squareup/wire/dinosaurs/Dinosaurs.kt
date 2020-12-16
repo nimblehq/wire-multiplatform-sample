@@ -15,8 +15,8 @@
  */
 package com.squareup.wire.dinosaurs
 
-import com.squareup.dinosaurs.Dinosaur
-import com.squareup.geology.Period.JURASSIC
+import com.squareup.common.Dinosaur
+import com.squareup.common.Period.JURASSIC
 import io.ktor.application.Application
 import io.ktor.application.call
 import io.ktor.application.install

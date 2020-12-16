@@ -15,9 +15,9 @@
  */
 syntax = "proto3";
 
-package squareup.geology;
+package com.squareup;
 
-option java_package = "com.squareup.geology";
+option java_package = "com.squareup.common";
 
 enum Period {
   /** Period undefined. */

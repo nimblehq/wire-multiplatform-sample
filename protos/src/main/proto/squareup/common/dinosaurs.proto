@@ -15,11 +15,10 @@
  */
 syntax = "proto3";
 
-package squareup.dinosaurs;
+package com.squareup;
+import "squareup/common/periods.proto";
 
-option java_package = "com.squareup.dinosaurs";
-
-import "squareup/geology/period.proto";
+option java_package = "com.squareup.common";
 
 message Dinosaur {
   /** Common name of this dinosaur, like "Stegosaurus". */
@@ -30,5 +29,5 @@ message Dinosaur {
 
   double length_meters = 3;
   double mass_kilograms = 4;
-  squareup.geology.Period period = 5;
+  com.squareup.Period period = 5;
 }

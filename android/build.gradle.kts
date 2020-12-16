@@ -38,6 +38,10 @@ android {
     kotlinCompilerExtensionVersion = versions.compose
     kotlinCompilerVersion = versions.kotlin
   }
+  kotlinOptions {
+    jvmTarget = "1.8"
+    useIR = true
+  }
 }
 
 dependencies {

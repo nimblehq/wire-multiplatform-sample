@@ -23,38 +23,47 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color.Companion.Transparent
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import androidx.ui.tooling.preview.Preview
+import com.squareup.common.Dinosaur
+import com.squareup.common.Period
 import com.squareup.dinosaurs.ui.DinosaursTheme
 import com.squareup.dinosaurs.ui.typography
-import com.squareup.geology.Period.JURASSIC
 
-@Composable fun DinosaurView(dinosaur: Dinosaur) {
-  Column(modifier = Modifier.padding(32.dp)) {
-    Text(stringResource(R.string.name_template, dinosaur.name), style = typography.body1)
-    Divider(color = Transparent, thickness = 16.dp)
-    Text(stringResource(R.string.period_template, dinosaur.period.name), style = typography.body1)
-    Divider(color = Transparent, thickness = 16.dp)
-    Text(
+@Composable
+fun DinosaurView(dinosaur: Dinosaur?) {
+  if (dinosaur == null) {
+    Column(modifier = Modifier.padding(32.dp)) {
+      Text(stringResource(R.string.error_template, "Exception occurred!"), style = typography.body1)
+    }
+  } else {
+    Column(modifier = Modifier.padding(32.dp)) {
+      Text(stringResource(R.string.name_template, dinosaur.name), style = typography.body1)
+      Divider(color = Transparent, thickness = 16.dp)
+      Text(stringResource(R.string.period_template, dinosaur.period.name), style = typography.body1)
+      Divider(color = Transparent, thickness = 16.dp)
+      Text(
         stringResource(R.string.length_template, dinosaur.length_meters),
         style = typography.body1,
-    )
-    Divider(color = Transparent, thickness = 16.dp)
-    Text(
+      )
+      Divider(color = Transparent, thickness = 16.dp)
+      Text(
         stringResource(R.string.mass_template, dinosaur.mass_kilograms),
         style = typography.body1,
-    )
+      )
+    }
   }
 }
 
 @Preview(showBackground = true)
-@Composable fun DefaultPreview() {
+@Composable
+fun DefaultPreview() {
   val dinosaur = Dinosaur(
-      name = "Stegosaurus",
-      period = JURASSIC,
-      length_meters = 9.0,
-      mass_kilograms = 5000.0,
-      picture_urls = listOf("http://goo.gl/LD5KY5", "http://goo.gl/VYRM67"),
+    name = "Stegosaurus",
+    period = Period.JURASSIC,
+    length_meters = 9.0,
+    mass_kilograms = 5000.0,
+    picture_urls = listOf("http://goo.gl/LD5KY5", "http://goo.gl/VYRM67"),
   )
   DinosaursTheme {
     DinosaurView(dinosaur)

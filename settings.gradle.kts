@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 include(
-    ":android",
-    ":cli",
-    ":protos",
-    ":server"
+  ":android",
+  ":cli",
+  ":protos",
+  ":server"
 )
 
 rootProject.name = "Dinosaurs"

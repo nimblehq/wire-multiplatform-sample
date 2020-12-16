@@ -35,14 +35,18 @@ class MainActivity : AppCompatActivity() {
     super.onCreate(savedInstanceState)
 
     val dinosaursApi = Retrofit.Builder()
-        .baseUrl("https://wire-dinosaurs-demo.herokuapp.com")
+        .baseUrl("https://10.0.0.2:8080") // If you run on emulator, use this, if not, point to your own IP address
         .addConverterFactory(WireConverterFactory.create())
         .build()
         .create(DinosaursApi::class.java)
 
     scope.launch {
       val dinosaur = withContext(Dispatchers.IO) {
-        dinosaursApi.getDinosaur()
+        try {
+          dinosaursApi.getDinosaur()
+        } catch (ex: Exception) {
+          null
+        }
       }
       setContent {
         DinosaursTheme {

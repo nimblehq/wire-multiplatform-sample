@@ -15,6 +15,7 @@
  */
 package com.squareup.dinosaurs
 
+import com.squareup.common.Dinosaur
 import retrofit2.http.GET
 
 interface DinosaursApi {

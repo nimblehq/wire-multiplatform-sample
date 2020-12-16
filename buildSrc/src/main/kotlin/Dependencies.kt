@@ -17,8 +17,8 @@
 
 object versions {
   // Common
-  const val kotlin = "1.4.10"
-  const val wire = "3.3.0"
+  const val kotlin = "1.4.20"
+  const val wire = "3.4.0"
   // Server
   const val ktor = "1.4.0"
   const val shadow = "6.0.0"
@@ -27,7 +27,7 @@ object versions {
   const val appcompat = "1.1.0"
   const val coroutines = "1.3.9"
   const val retrofit = "2.9.0"
-  const val compose = "1.0.0-alpha01"
+  const val compose = "1.0.0-alpha08"
 }
 
 object deps {
@@ -49,7 +49,7 @@ object deps {
   }
   object compose {
     const val ui = "androidx.compose.ui:ui:${versions.compose}"
-    const val uiTooling = "androidx.ui:ui-tooling:${versions.compose}"
+    const val uiTooling = "androidx.compose.ui:ui-tooling:${versions.compose}"
     const val material = "androidx.compose.material:material:${versions.compose}"
   }
   object ktor {
