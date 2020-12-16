@@ -17,22 +17,22 @@ We made a few adjustments to accommodate our needs of demo, as well as documenta
 - Jetpack Compose (Android): https://developer.android.com/jetpack/compose/
 
 ## Getting started
-0. Import this project as a whole.
+  0. Import this project as a whole.
 
-1. Run the server app:
+  1. Run the server app:
 
-`$ ./gradlew server:run`
+    `$ ./gradlew server:run`
 
-2. Run the Android app:
+  2. Run the Android app:
 
-`$ ./gradlew android:assembleDebug`
-or you can import the project with android studio.
+    `$ ./gradlew android:assembleDebug`
+  or you can import the project with android studio.
 
-3. Run the iOS app:
+  3. Run the iOS app:
  
- a. Build the protos common: `$ ./gradlew protos:build`
+   a. Build the protos common: `$ ./gradlew protos:build`
  
- b. Open XCode and import the iOS module and run.
+   b. Open XCode and import the iOS module and run.
 
 
 **Note:** Remember: for development purpose we are running on localhost, so you may want to update the pointing address on each client app.
