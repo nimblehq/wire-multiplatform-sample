@@ -15,16 +15,23 @@
  */
 package com.squareup.dinosaurs
 
-import androidx.compose.foundation.Text
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.padding
+import android.graphics.Bitmap
+import android.graphics.drawable.Drawable
+import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.text.BasicText
 import androidx.compose.material.Divider
-import androidx.compose.runtime.Composable
+import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color.Companion.Transparent
+import androidx.compose.ui.graphics.asImageBitmap
+import androidx.compose.ui.platform.AmbientContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.bumptech.glide.Glide
+import com.bumptech.glide.request.target.CustomTarget
+import com.bumptech.glide.request.transition.Transition
 import com.squareup.common.Dinosaur
 import com.squareup.common.Period
 import com.squareup.dinosaurs.ui.DinosaursTheme
@@ -32,30 +39,54 @@ import com.squareup.dinosaurs.ui.typography
 
 @Composable
 fun DinosaurView(dinosaur: Dinosaur?) {
+
   if (dinosaur == null) {
     Column(modifier = Modifier.padding(32.dp)) {
-      Text(stringResource(R.string.error_template, "Exception occurred!"), style = typography.body1)
+      BasicText(
+        stringResource(R.string.error_template, "Exception occurred!"),
+        style = typography.body1
+      )
     }
   } else {
+    var bitmap by remember { mutableStateOf<Bitmap?>(null) }
+
+    Glide.with(AmbientContext.current).asBitmap()
+      .load(dinosaur.picture_urls[0])
+      .into(object : CustomTarget<Bitmap>() {
+        override fun onResourceReady(resource: Bitmap, transition: Transition<in Bitmap>?) {
+          bitmap = resource
+        }
+
+        override fun onLoadCleared(placeholder: Drawable?) {}
+      })
+
     Column(modifier = Modifier.padding(32.dp)) {
-      Text(stringResource(R.string.name_template, dinosaur.name), style = typography.body1)
+      BasicText(stringResource(R.string.name_template, dinosaur.name), style = typography.body1)
       Divider(color = Transparent, thickness = 16.dp)
-      Text(stringResource(R.string.period_template, dinosaur.period.name), style = typography.body1)
+      BasicText(
+        stringResource(R.string.period_template, dinosaur.period.name),
+        style = typography.body1
+      )
       Divider(color = Transparent, thickness = 16.dp)
-      Text(
+      BasicText(
         stringResource(R.string.length_template, dinosaur.length_meters),
         style = typography.body1,
       )
       Divider(color = Transparent, thickness = 16.dp)
-      Text(
+      BasicText(
         stringResource(R.string.mass_template, dinosaur.mass_kilograms),
         style = typography.body1,
       )
+      Divider(color = Transparent, thickness = 16.dp)
+      if (bitmap != null)
+        Image(bitmap!!.asImageBitmap(), Modifier.fillMaxWidth())
+      else
+        BasicText("Loading Image...")
     }
   }
 }
 
-@Preview(showBackground = true)
+@Preview
 @Composable
 fun DefaultPreview() {
   val dinosaur = Dinosaur(

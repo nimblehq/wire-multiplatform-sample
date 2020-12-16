@@ -16,6 +16,7 @@
 plugins {
   id("com.android.application")
   kotlin("android")
+  kotlin("kapt")
 }
 
 android {
@@ -45,6 +46,8 @@ android {
 }
 
 dependencies {
+  annotationProcessor(deps.compiler.glide)
+
   implementation(project(":protos"))
   implementation(deps.coroutines.core)
   implementation(deps.coroutines.android)
@@ -54,4 +57,5 @@ dependencies {
   implementation(deps.compose.ui)
   implementation(deps.compose.uiTooling)
   implementation(deps.appcompat)
+  implementation(deps.cosmetic.glide)
 }
