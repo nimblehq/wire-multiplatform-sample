@@ -20,7 +20,7 @@ plugins {
 }
 
 application {
-  setMainClassName("io.ktor.server.netty.DevelopmentEngine")
+  mainClass.set("io.ktor.server.netty.DevelopmentEngine")
 }
 
 dependencies {

@@ -23,7 +23,7 @@ object versions {
   const val ktor = "1.4.0"
   const val shadow = "6.0.0"
   // Android
-  const val agp = "4.2.0-alpha11"
+  const val agp = "7.0.0-alpha03"
   const val appcompat = "1.1.0"
   const val coroutines = "1.3.9"
   const val retrofit = "2.9.0"
