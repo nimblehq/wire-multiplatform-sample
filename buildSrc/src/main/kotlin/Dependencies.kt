@@ -28,6 +28,8 @@ object versions {
   const val coroutines = "1.3.9"
   const val retrofit = "2.9.0"
   const val compose = "1.0.0-alpha08"
+
+  const val glide = "4.11.0"
 }
 
 object deps {
@@ -36,6 +38,11 @@ object deps {
     const val kotlin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${versions.kotlin}"
     const val wire = "com.squareup.wire:wire-gradle-plugin:${versions.wire}"
   }
+
+  object compiler {
+    const val glide = "com.github.bumptech.glide:compiler:${versions.glide}"
+  }
+
   object coroutines {
     const val core = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${versions.coroutines}"
     const val android = "org.jetbrains.kotlinx:kotlinx-coroutines-android:${versions.coroutines}"
@@ -56,4 +63,8 @@ object deps {
     const val netty = "io.ktor:ktor-server-netty:${versions.ktor}"
   }
   const val appcompat = "androidx.appcompat:appcompat:${versions.appcompat}"
+
+  object cosmetic {
+    const val glide = "com.github.bumptech.glide:glide:${versions.glide}"
+  }
 }
