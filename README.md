@@ -21,16 +21,16 @@ We made a few adjustments to accommodate our needs of demo, as well as documenta
 
   1. Run the server app:
 
-    `$ ./gradlew server:run`
+    $./gradlew server:run
 
   2. Run the Android app:
 
-    `$ ./gradlew android:assembleDebug`
+    $./gradlew android:assembleDebug
   or you can import the project with android studio.
 
   3. Run the iOS app:
  
-   a. Build the protos common: `$ ./gradlew protos:build`
+   a. Build the protos common: `$./gradlew protos:build`
  
    b. Open XCode and import the iOS module and run.
 
