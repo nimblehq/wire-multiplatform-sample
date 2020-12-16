@@ -6,13 +6,15 @@ We made a few adjustments to accommodate our needs of demo, as well as documenta
 
 ## Documentations
 
-Protocol Buffers: https://developers.google.com/protocol-buffers
+- Protocol Buffers: https://developers.google.com/protocol-buffers
 
-Wire: https://square.github.io/wire/
+- Wire: https://square.github.io/wire/
 
-Kotlin Multiplatform: https://kotlinlang.org/docs/reference/multiplatform.html
+- Kotlin Multiplatform: https://kotlinlang.org/docs/reference/multiplatform.html
 
-Ktor: https://ktor.io/docs/quickstart-index.html
+- Ktor: https://ktor.io/docs/quickstart-index.html
+
+- Jetpack Compose (Android): https://developer.android.com/jetpack/compose/
 
 ## Getting started
 0. Import this project as a whole.
