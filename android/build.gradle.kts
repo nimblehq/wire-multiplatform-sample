@@ -46,8 +46,6 @@ android {
 }
 
 dependencies {
-  annotationProcessor(deps.compiler.glide)
-
   implementation(project(":protos"))
   implementation(deps.coroutines.core)
   implementation(deps.coroutines.android)
@@ -56,6 +54,6 @@ dependencies {
   implementation(deps.compose.material)
   implementation(deps.compose.ui)
   implementation(deps.compose.uiTooling)
+  implementation(deps.compose.glideExtension)
   implementation(deps.appcompat)
-  implementation(deps.cosmetic.glide)
 }

@@ -36,6 +36,7 @@ import com.squareup.common.Dinosaur
 import com.squareup.common.Period
 import com.squareup.dinosaurs.ui.DinosaursTheme
 import com.squareup.dinosaurs.ui.typography
+import dev.chrisbanes.accompanist.glide.GlideImage
 
 @Composable
 fun DinosaurView(dinosaur: Dinosaur?) {
@@ -48,18 +49,6 @@ fun DinosaurView(dinosaur: Dinosaur?) {
       )
     }
   } else {
-    var bitmap by remember { mutableStateOf<Bitmap?>(null) }
-
-    Glide.with(AmbientContext.current).asBitmap()
-      .load(dinosaur.picture_urls[0])
-      .into(object : CustomTarget<Bitmap>() {
-        override fun onResourceReady(resource: Bitmap, transition: Transition<in Bitmap>?) {
-          bitmap = resource
-        }
-
-        override fun onLoadCleared(placeholder: Drawable?) {}
-      })
-
     Column(modifier = Modifier.padding(32.dp)) {
       BasicText(stringResource(R.string.name_template, dinosaur.name), style = typography.body1)
       Divider(color = Transparent, thickness = 16.dp)
@@ -78,10 +67,7 @@ fun DinosaurView(dinosaur: Dinosaur?) {
         style = typography.body1,
       )
       Divider(color = Transparent, thickness = 16.dp)
-      if (bitmap != null)
-        Image(bitmap!!.asImageBitmap(), Modifier.fillMaxWidth())
-      else
-        BasicText("Loading Image...")
+      GlideImage(data = dinosaur.picture_urls.firstOrNull() ?: "", fadeIn = true)
     }
   }
 }
