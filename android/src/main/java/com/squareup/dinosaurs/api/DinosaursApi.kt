@@ -13,12 +13,16 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.squareup.dinosaurs
+package com.squareup.dinosaurs.api
 
 import com.squareup.common.Dinosaur
+import com.squareup.common.Dinosaurs
 import retrofit2.http.GET
 
 interface DinosaursApi {
   @GET("/dinosaur")
   suspend fun getDinosaur(): Dinosaur
+
+  @GET("/dinosaurs")
+  suspend fun getDinosaurs(): Dinosaurs
 }

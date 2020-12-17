@@ -31,3 +31,7 @@ message Dinosaur {
   double mass_kilograms = 4;
   com.squareup.Period period = 5;
 }
+
+message Dinosaurs {
+  repeated com.squareup.Dinosaur dinosaurs = 1;
+}

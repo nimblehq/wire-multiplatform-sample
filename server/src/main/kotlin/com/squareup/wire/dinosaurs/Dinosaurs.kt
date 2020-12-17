@@ -16,7 +16,8 @@
 package com.squareup.wire.dinosaurs
 
 import com.squareup.common.Dinosaur
-import com.squareup.common.Period.JURASSIC
+import com.squareup.common.Dinosaurs
+import com.squareup.common.Period.*
 import io.ktor.application.Application
 import io.ktor.application.call
 import io.ktor.application.install
@@ -28,12 +29,21 @@ import io.ktor.response.respondBytes
 import io.ktor.routing.get
 import io.ktor.routing.routing
 
-val stegosaurus = Dinosaur(
+val dinosaurs = listOf(
+  Dinosaur(
     name = "Stegosaurus",
     period = JURASSIC,
+    length_meters = 13.0,
+    mass_kilograms = 8800.0,
+    picture_urls = listOf("http://goo.gl/LD5KY5", "http://goo.gl/VYRM67")
+  ),
+  Dinosaur(
+    name = "T-Rex",
+    period = CRETACEOUS,
     length_meters = 9.0,
     mass_kilograms = 5000.0,
-    picture_urls = listOf("http://goo.gl/LD5KY5", "http://goo.gl/VYRM67"),
+    picture_urls = listOf("https://bit.ly/3my1mk0")
+  )
 )
 
 fun Application.main() {
@@ -44,9 +54,16 @@ fun Application.main() {
     }
     get("/dinosaur") {
       call.respondBytes(
-          bytes = Dinosaur.ADAPTER.encode(stegosaurus),
-          contentType = ContentType("application", "protobuf"),
-          status = HttpStatusCode.OK,
+        bytes = Dinosaur.ADAPTER.encode(dinosaurs[1]),
+        contentType = ContentType("application", "protobuf"),
+        status = HttpStatusCode.OK
+      )
+    }
+    get("/dinosaurs") {
+      call.respondBytes(
+        bytes = Dinosaurs.ADAPTER.encode(Dinosaurs(dinosaurs)),
+        contentType = ContentType("application", "protobuf"),
+        status = HttpStatusCode.OK
       )
     }
   }
