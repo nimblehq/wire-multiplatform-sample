@@ -36,9 +36,12 @@ or you can import the project with android studio.
 **Note:** Remember: for development purpose we are running on localhost, so you may want to update the pointing address on each client app.
 
 ## Troubleshoot
+
 1. On IntelliJ/Android Studio, from :server, I cannot reference to generatedSrc of :protos
--> To fix this: Open Module Settings -> Project Settings -> Modules -> Add "Dinosaurs.protos.commonMain" as a Provided Dependency.
--> If necessary, File -> Invalidate Cache and Restart.
+
+ -> To fix this: Open Module Settings -> Project Settings -> Modules -> Add "Dinosaurs.protos.commonMain" as a Provided Dependency.
+
+ -> If necessary, File -> Invalidate Cache and Restart.
 
 
 Still have issue? File an Issue and we may help you out.
