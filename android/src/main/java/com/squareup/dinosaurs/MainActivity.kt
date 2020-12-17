@@ -18,27 +18,16 @@ package com.squareup.dinosaurs
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.ui.platform.setContent
+import com.squareup.dinosaurs.api.DinosaurRetrofit.dinosaursApi
 import com.squareup.dinosaurs.ui.DinosaursTheme
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.MainScope
-import kotlinx.coroutines.cancel
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
-import retrofit2.Retrofit
-import retrofit2.converter.wire.WireConverterFactory
+import com.squareup.dinosaurs.view.DinosaurView
+import kotlinx.coroutines.*
 
 class MainActivity : AppCompatActivity() {
   private val scope: CoroutineScope = MainScope()
 
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
-
-    val dinosaursApi = Retrofit.Builder()
-        .baseUrl("https://10.0.0.2:8080") // If you run on emulator, use this, if not, point to your own IP address
-        .addConverterFactory(WireConverterFactory.create())
-        .build()
-        .create(DinosaursApi::class.java)
 
     scope.launch {
       val dinosaur = withContext(Dispatchers.IO) {
