@@ -19,9 +19,11 @@ object versions {
   // Common
   const val kotlin = "1.4.20"
   const val wire = "3.4.0"
+
   // Server
   const val ktor = "1.4.0"
   const val shadow = "6.0.0"
+
   // Android
   const val agp = "7.0.0-alpha03"
   const val appcompat = "1.1.0"
@@ -29,7 +31,7 @@ object versions {
   const val retrofit = "2.9.0"
   const val compose = "1.0.0-alpha08"
 
-  const val glide = "4.11.0"
+  const val accompanist_glide = "0.4.0"
 }
 
 object deps {
@@ -39,32 +41,32 @@ object deps {
     const val wire = "com.squareup.wire:wire-gradle-plugin:${versions.wire}"
   }
 
-  object compiler {
-    const val glide = "com.github.bumptech.glide:compiler:${versions.glide}"
-  }
-
   object coroutines {
     const val core = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${versions.coroutines}"
     const val android = "org.jetbrains.kotlinx:kotlinx-coroutines-android:${versions.coroutines}"
   }
+
   object wire {
     const val runtime = "com.squareup.wire:wire-runtime-multiplatform:${versions.wire}"
   }
+
   object retrofit {
     const val core = "com.squareup.retrofit2:retrofit:${versions.retrofit}"
     const val wire = "com.squareup.retrofit2:converter-wire:${versions.retrofit}"
   }
+
   object compose {
     const val ui = "androidx.compose.ui:ui:${versions.compose}"
     const val uiTooling = "androidx.compose.ui:ui-tooling:${versions.compose}"
     const val material = "androidx.compose.material:material:${versions.compose}"
+
+    const val glideExtension =
+      "dev.chrisbanes.accompanist:accompanist-glide:${versions.accompanist_glide}"
   }
+
   object ktor {
     const val netty = "io.ktor:ktor-server-netty:${versions.ktor}"
   }
-  const val appcompat = "androidx.appcompat:appcompat:${versions.appcompat}"
 
-  object cosmetic {
-    const val glide = "com.github.bumptech.glide:glide:${versions.glide}"
-  }
+  const val appcompat = "androidx.appcompat:appcompat:${versions.appcompat}"
 }
