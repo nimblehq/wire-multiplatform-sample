@@ -56,5 +56,5 @@ See [our other projects][community] or [hire our team][hire] to help build your 
 [community]: https://github.com/nimblehq
 [hire]: https://nimblehq.co/
 
-Credit to @Egorand(https://github.com/Egorand) and Square(https://github.com/square) the original author.
+Credit to [@Egorand](https://github.com/Egorand) and [@Square](https://github.com/square) the original author.
 
