@@ -54,7 +54,7 @@ fun Application.main() {
     }
     get("/dinosaur") {
       call.respondBytes(
-        bytes = Dinosaur.ADAPTER.encode(dinosaurs[1]),
+        bytes = Dinosaur.ADAPTER.encode(dinosaurs.first()),
         contentType = ContentType("application", "protobuf"),
         status = HttpStatusCode.OK
       )
