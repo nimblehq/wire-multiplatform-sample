@@ -1,8 +1,6 @@
-# gRPC meets Kotlin Multiplatform 
+# Protobuf meets Kotlin Multiplatform 
 
-An example of building gRPC apps powered by Wire and Kotlin Multiplatform.
-
-We made a few adjustments to accommodate our needs of demo, as well as documentation for people to get starting with.
+An example of building apps powered by Wire and Kotlin Multiplatform, serving protobuf response.
 
 ## Documentations
 
