@@ -15,13 +15,13 @@
  */
 package com.squareup.wire.dinosaurs
 
-import com.squareup.dinosaurs.Dinosaur
-import com.squareup.geology.Period.JURASSIC
+import com.squareup.common.Dinosaur
+import com.squareup.common.Period
 
 fun main() {
   val stegosaurus = Dinosaur(
       name = "Stegosaurus",
-      period = JURASSIC,
+      period = Period.JURASSIC,
       length_meters = 9.0,
       mass_kilograms = 5000.0,
   )
