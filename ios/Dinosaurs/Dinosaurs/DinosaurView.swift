@@ -16,13 +16,16 @@ struct DinosaurView: View {
         .font(.title)
         .padding()
       Text("Period: \(dinosaur.period.description())")
-        .font(.title)
+        .font(.body)
         .padding()
       Text("Length: \(dinosaur.length_meters.description)")
-        .font(.title)
+        .font(.body)
         .padding()
       Text("Mass: \(dinosaur.mass_kilograms.description)")
-        .font(.title)
+        .font(.body)
+        .padding()
+      Text("Image url: \(dinosaur.picture_urls[0])")
+        .font(.body)
         .padding()
     }
   }
@@ -41,3 +44,4 @@ struct DinosaurView_Previews: PreviewProvider {
     return Dinosaur.Companion.init().ADAPTER.decode(data: data as Data) as! Dinosaur
   }
 }
+

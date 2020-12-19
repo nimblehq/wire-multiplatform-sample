@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C79C560EBB375C53E46A744 /* Pods_Dinosaurs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 099464FEE1A7B520A4FCAE73 /* Pods_Dinosaurs.framework */; };
 		741F4CF623F48DC20074529F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741F4CF523F48DC20074529F /* AppDelegate.swift */; };
 		741F4CF823F48DC20074529F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741F4CF723F48DC20074529F /* SceneDelegate.swift */; };
 		741F4CFF23F48DC30074529F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 741F4CFE23F48DC30074529F /* Assets.xcassets */; };
@@ -14,10 +15,11 @@
 		746CEEBA23F48E1B008381B1 /* DinosaurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746CEEB923F48E1B008381B1 /* DinosaurView.swift */; };
 		746CEEBC23F48E5E008381B1 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746CEEBB23F48E5E008381B1 /* Resource.swift */; };
 		746CEEBE23F48E96008381B1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746CEEBD23F48E96008381B1 /* ContentView.swift */; };
-		9576CDFF6E88147D1A7B2CEF /* Pods_Dinosaurs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BF928F67651422E95DFC782 /* Pods_Dinosaurs.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		099464FEE1A7B520A4FCAE73 /* Pods_Dinosaurs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dinosaurs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		09C43CBF0DA8AA2B8B0F8850 /* Pods-Dinosaurs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dinosaurs.release.xcconfig"; path = "Target Support Files/Pods-Dinosaurs/Pods-Dinosaurs.release.xcconfig"; sourceTree = "<group>"; };
 		741F4CF223F48DC20074529F /* Dinosaurs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dinosaurs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		741F4CF523F48DC20074529F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		741F4CF723F48DC20074529F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -27,9 +29,7 @@
 		746CEEB923F48E1B008381B1 /* DinosaurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinosaurView.swift; sourceTree = "<group>"; };
 		746CEEBB23F48E5E008381B1 /* Resource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
 		746CEEBD23F48E96008381B1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		7BF928F67651422E95DFC782 /* Pods_Dinosaurs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dinosaurs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E1E44CA8B772EE4AC2ED5A30 /* Pods-Dinosaurs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dinosaurs.debug.xcconfig"; path = "Target Support Files/Pods-Dinosaurs/Pods-Dinosaurs.debug.xcconfig"; sourceTree = "<group>"; };
-		FD85FE44C1A07AB2DF50B7F3 /* Pods-Dinosaurs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dinosaurs.release.xcconfig"; path = "Target Support Files/Pods-Dinosaurs/Pods-Dinosaurs.release.xcconfig"; sourceTree = "<group>"; };
+		B5615463DF5B180FC906BC9A /* Pods-Dinosaurs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dinosaurs.debug.xcconfig"; path = "Target Support Files/Pods-Dinosaurs/Pods-Dinosaurs.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,17 +37,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9576CDFF6E88147D1A7B2CEF /* Pods_Dinosaurs.framework in Frameworks */,
+				2C79C560EBB375C53E46A744 /* Pods_Dinosaurs.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		45E9FAF691082EA876C359CE /* Frameworks */ = {
+		66B2C33A3A064932A67BFA82 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				7BF928F67651422E95DFC782 /* Pods_Dinosaurs.framework */,
+				099464FEE1A7B520A4FCAE73 /* Pods_Dinosaurs.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -58,7 +58,7 @@
 				741F4CF423F48DC20074529F /* Dinosaurs */,
 				741F4CF323F48DC20074529F /* Products */,
 				F7E4839CBC51485B1DCF8686 /* Pods */,
-				45E9FAF691082EA876C359CE /* Frameworks */,
+				66B2C33A3A064932A67BFA82 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -88,8 +88,8 @@
 		F7E4839CBC51485B1DCF8686 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				E1E44CA8B772EE4AC2ED5A30 /* Pods-Dinosaurs.debug.xcconfig */,
-				FD85FE44C1A07AB2DF50B7F3 /* Pods-Dinosaurs.release.xcconfig */,
+				B5615463DF5B180FC906BC9A /* Pods-Dinosaurs.debug.xcconfig */,
+				09C43CBF0DA8AA2B8B0F8850 /* Pods-Dinosaurs.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -101,7 +101,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 741F4D0623F48DC30074529F /* Build configuration list for PBXNativeTarget "Dinosaurs" */;
 			buildPhases = (
-				6D8EA870BD58ED601DE1495C /* [CP] Check Pods Manifest.lock */,
+				E0FF099143170E0529C85CD7 /* [CP] Check Pods Manifest.lock */,
 				741F4CEE23F48DC20074529F /* Sources */,
 				741F4CEF23F48DC20074529F /* Frameworks */,
 				741F4CF023F48DC20074529F /* Resources */,
@@ -122,7 +122,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1130;
-				LastUpgradeCheck = 1130;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = Square;
 				TargetAttributes = {
 					741F4CF123F48DC20074529F = {
@@ -161,7 +161,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		6D8EA870BD58ED601DE1495C /* [CP] Check Pods Manifest.lock */ = {
+		E0FF099143170E0529C85CD7 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -238,6 +238,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -298,6 +299,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -328,7 +330,7 @@
 		};
 		741F4D0723F48DC30074529F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E1E44CA8B772EE4AC2ED5A30 /* Pods-Dinosaurs.debug.xcconfig */;
+			baseConfigurationReference = B5615463DF5B180FC906BC9A /* Pods-Dinosaurs.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -346,7 +348,7 @@
 		};
 		741F4D0823F48DC30074529F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FD85FE44C1A07AB2DF50B7F3 /* Pods-Dinosaurs.release.xcconfig */;
+			baseConfigurationReference = 09C43CBF0DA8AA2B8B0F8850 /* Pods-Dinosaurs.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
